@@ -1,12 +1,14 @@
-
 body {
   background-color: #d4d9ff;
 }
 
-
 #header-nav .container {
   height: auto;
   background-color: #a1acff;
+  width: 100%;
+}
+
+#main-content {
   width: 100%;
 }
 
