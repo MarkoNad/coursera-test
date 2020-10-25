@@ -1,0 +1,100 @@
+body {
+  background-color: #d4d9ff;
+}
+
+#header-nav .container {
+  height: auto;
+  background-color: #a1acff;
+  width: 100%;
+}
+
+#main-content {
+  width: 100%;
+}
+
+.navbar-brand h1 {
+  color: black;
+  margin-top: 0;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -40px;
+}
+
+#navlist {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+}
+
+#collapsable-nav {
+  /*background-color: #d4d9ff;*/
+  /*background-color: #a1acff;*/
+  /*background-color: #c2c2c2;*/
+}
+
+@media (min-width: 768px)
+.navbar-collapse.collapse {
+  display: none;
+}
+
+#main-content section {
+  /*background-color: #d4d9ff;*/
+}
+
+#collapsable-nav hr {
+  margin: 0;
+}
+
+
+
+.tile {
+  border: 1px solid black;
+  background-color: #dba78a;
+  position: relative;
+  height: 600px;
+  margin: 10px;
+}
+
+p.title {
+  border: 1px solid black;
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  width: 100px;
+  float: right;
+  font-size: 1.25em;
+}
+
+.chicken-title {
+  background-color: #bd7f7b;
+}
+
+.beef-title {
+  background-color: #e3271b;
+  color: white;
+}
+
+.sushi-title {
+  background-color: #fcffb0;
+}
+
+p.description {
+  position: relative;
+  margin: 0px;
+  padding: 10px;
+  float: left;
+}
+
+section a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  size: 1.2em;
+  color: black;
+}
