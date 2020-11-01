@@ -16,6 +16,12 @@ body {
   text-shadow: 1px 1px 1px #222;
 }
 
+.navbar-brand p span {
+  text-transform: uppercase;
+  color: black;
+  font-size: 0.75em;
+}
+
 #logo-img {
   background: url('../images/restaurant-logo_large.png') no-repeat;
   width: 150px;
@@ -29,4 +35,34 @@ body {
     width: 100px;
     height: 100px;
   }
+}
+
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#nav-list a:hover {
+  background-color: #E7E7E7;
+}
+
+#nav-list a span {
+  font-size: 1.5em;
+}
+
+#nav-list div {
+  color: #557c3e;
+  font-size: 1.2em;
+}
+
+#phone a {
+  font-size: 1.2em;
+  margin-top: 2px;
+  padding-bottom: 3px;
+}
+
+#phone div {
+  padding-right: 15px;
+  text-align: right;
 }
