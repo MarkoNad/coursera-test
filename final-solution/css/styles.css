@@ -1,0 +1,32 @@
+body {
+  background-color: #61122f;
+}
+
+#header-nav {
+  background-color: #f6b319;
+}
+
+.navbar-brand h1 {
+  text-transform: uppercase;
+  color: #557c3e;
+  font-size: 1.5em;
+  margin-top: 0px;
+  font-family: 'Lora, serif';
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+}
+
+#logo-img {
+  background: url('../images/restaurant-logo_large.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #logo-img {
+    background: url('../images/restaurant-logo_medium.png') no-repeat;
+    width: 100px;
+    height: 100px;
+  }
+}
