@@ -83,6 +83,35 @@ body {
   font-size: 0.8em;
 }
 
+/* Footer */
+
+.page-footer {
+  color: #fff;
+  background-color: #222;
+  font-size: 1.2em;
+}
+
+.page-footer hr {
+  width: 50%;
+}
+
+#delivery {
+  color: #557c3e;
+  font-size: 0.8em;
+}
+
+.footer-copyright {
+  padding: 20px;
+}
+
+#reviews p {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* End footer */
+
+
 @media (min-width: 992px) and (max-width: 1199px) {
   #logo-img {
     background: url('../images/restaurant-logo_medium.png') no-repeat;
@@ -94,5 +123,9 @@ body {
 @media (max-width: 767px) {
   #header-nav {
     min-height: 100px;
+  }
+
+  .page-footer {
+    text-align: center;
   }
 }
