@@ -77,8 +77,13 @@
 
         for (var i = 0; i < categoriesArray.length; i++) {
           console.log("Name " + i + ": " + shortName);
+
           var shortName = categoriesArray[i].short_name;
+          var name = categoriesArray[i].name;
+
           var populatedCategoryHtml = insertProperty(menuCategoryHtml, 'short_name', shortName);
+          var populatedCategoryHtml = insertProperty(populatedCategoryHtml, 'name', name);
+          
           menuCategoriesHtml += populatedCategoryHtml;
         }
 
