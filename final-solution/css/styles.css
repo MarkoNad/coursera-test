@@ -165,6 +165,19 @@ body {
 
 /* End home snippet */
 
+
+
+/* Categories snippet */
+
+#category-tile {
+  background: url('../images/menu-tile.jpg') no-repeat;
+  background-position: center;
+}
+
+/* End categories snippet */
+
+
+
 @media (min-width: 1200px) {
   .container .jumbotron {
     background: url('../images/jumbotron_1200.jpg') no-repeat;
