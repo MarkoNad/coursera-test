@@ -116,8 +116,9 @@ body {
 /* Home snippet */
 
 #tiles-container {
-  margin-left: -15px;
-  margin-bottom: 30px;
+  /*margin-left: -15px;*/
+  /*margin-bottom: 30px;*/
+  /*margin: auto;*/
 }
 
 .tile {
@@ -126,6 +127,16 @@ body {
   border: 1px solid black;
   margin-bottom: 15px;
   overflow: hidden;
+
+
+
+  padding: 0;
+  margin: 0;
+}
+
+.tile-div {
+  margin: 0;
+  padding: 0;
 }
 
 #menu-tile {
@@ -139,7 +150,11 @@ body {
 }
 
 #menu-tile, #specials-tile {
-  /*width: 360px;*/
+  width: 360px;
+  margin: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
 }
 
 .tile span {
@@ -168,6 +183,10 @@ body {
     background: url('../images/jumbotron_1200.jpg') no-repeat;
     height: 675px;
   }
+
+  #map-tile {
+    width: 360px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -181,12 +200,24 @@ body {
     background: url('../images/jumbotron_992.jpg') no-repeat;
     height: 558px;
   }
+
+  #menu-tile, #specials-tile, #map-tile {
+    width: 290px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .container .jumbotron {
     background: url('../images/jumbotron_768.jpg') no-repeat;
     height: 432px;
+  }
+
+  #menu-tile, #specials-tile {
+    width: 345px;
+  }
+
+  #map-tile {
+    width: 718px;
   }
 }
 
