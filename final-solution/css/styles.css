@@ -115,28 +115,16 @@ body {
 
 /* Home snippet */
 
-#tiles-container {
-  /*margin-left: -15px;*/
-  /*margin-bottom: 30px;*/
-  /*margin: auto;*/
-}
-
 .tile {
   height: 250px;
   position: relative;
-  border: 1px solid black;
+  border: 2px solid #3F0C1F;
   margin-bottom: 15px;
   overflow: hidden;
-
-
-
-  padding: 0;
-  margin: 0;
 }
 
-.tile-div {
-  margin: 0;
-  padding: 0;
+.tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
 }
 
 #menu-tile {
@@ -152,8 +140,6 @@ body {
 #menu-tile, #specials-tile {
   width: 360px;
   margin: auto;
-  margin-left: 0;
-  margin-right: 0;
   margin-bottom: 15px;
 }
 
@@ -172,7 +158,8 @@ body {
 
 .container .jumbotron {
   padding: 0;
-  border: 1px solid black;
+  border: 2px solid #3F0C1F;
+  box-shadow: #3F0C1F;
   background-position: center;
 }
 
