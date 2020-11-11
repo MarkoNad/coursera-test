@@ -135,14 +135,23 @@ dc.loadMenuItems = function (shortName) {
           console.log("Items array: " + itemsArrayContainer);
 
           menuItemsHtml += '<div id="menu-items-container" class="row">';
+          console.log("menuItemsHtml: " + menuItemsHtml);
+
+          var categoryShortName = itemsArrayContainer.category.short_name;
+          var categoryName = itemsArrayContainer.category.name;
+          var specialInstructions = itemsArrayContainer.category.special_instructions;
+
+          menuItemsHtml = insertProperty(menuItemsHtml, 'category_name', categoryName);
+          console.log("menuItemsHtml: " + menuItemsHtml);
+          menuItemsHtml = insertProperty(menuItemsHtml, 'special_instructions', specialInstructions);
+          console.log("menuItemsHtml: " + menuItemsHtml);
 
           var itemsArray = itemsArrayContainer.menu_items;
 
           for (var i = 0; i < itemsArray.length; i++) {
             var shortName = itemsArray[i].short_name;
             console.log("Name " + i + ": " + shortName);
-
-            var categoryName = itemsArrayContainer.category.short_name;
+            
             var itemName = itemsArray[i].name;
             var itemShortName = itemsArray[i].short_name;
             var description = itemsArray[i].description;
@@ -150,7 +159,7 @@ dc.loadMenuItems = function (shortName) {
 
             var populatedItemHtml = insertProperty(menuItemHtml, 'item_short_name', itemShortName);
             populatedItemHtml = insertProperty(populatedItemHtml, 'item_name', itemName);
-            populatedItemHtml = insertProperty(populatedItemHtml, 'category_name', categoryName);
+            populatedItemHtml = insertProperty(populatedItemHtml, 'category_short_name', categoryShortName);
             
             menuItemsHtml += populatedItemHtml;
           }
