@@ -164,6 +164,10 @@ dc.loadMenuItems = function (shortName) {
             populatedItemHtml = insertProperty(populatedItemHtml, 'price', price);
             
             menuItemsHtml += populatedItemHtml;
+
+            if (i % 2 != 0) {
+              menuItemsHtml += "<div class='clearfix visible-lg-block visible-md-block'></div>";
+            }
           }
 
           menuItemsHtml += '</div>';
