@@ -12,8 +12,6 @@
 
   function insertHtml(selector, html) {
     var targetElement = document.querySelector(selector);
-    console.log("selector: " + selector);
-    console.log("element: " + targetElement);
     targetElement.innerHTML = html;
   }
 
@@ -80,8 +78,6 @@
     );
 
     function receiveMenuCategory(menuCategoryHtml) {
-      console.log("Receiving menu category.");
-
       $ajaxUtils.sendGetRequest(
         allCategoriesUrl,
         receiveCategoriesArray,
@@ -89,12 +85,10 @@
       );
 
       function receiveCategoriesArray(categoriesArray) {
-        console.log("Categories array: " + categoriesArray);
 
         menuCategoriesHtml += '<div id="categories-container" class="row">';
 
         for (var i = 0; i < categoriesArray.length; i++) {
-          console.log("Name " + i + ": " + shortName);
 
           var shortName = categoriesArray[i].short_name;
           var name = categoriesArray[i].name;
@@ -120,7 +114,6 @@
 
 dc.loadMenuItems = function (shortName) {
     showLoading("#main-content");
-    console.log("Category short name: " + shortName);
 
     $ajaxUtils.sendGetRequest(
       menuItemsHtmlUrl,
@@ -129,7 +122,6 @@ dc.loadMenuItems = function (shortName) {
     );
 
     function receiveMenuItems(menuItemsHtml) {
-      console.log("Category short name in receiveMenuItems: " + shortName);
       $ajaxUtils.sendGetRequest(
         menuItemHtmlUrl,
         receiveMenuItem,
@@ -137,9 +129,6 @@ dc.loadMenuItems = function (shortName) {
       );
 
       function receiveMenuItem(menuItemHtml) {
-        console.log("Receiving menu item.");
-        console.log("Category short name in receiveMenuItem: " + shortName);
-
         $ajaxUtils.sendGetRequest(
           menuItemsUrl + shortName,
           receiveItemsArray,
@@ -147,25 +136,19 @@ dc.loadMenuItems = function (shortName) {
         );
 
         function receiveItemsArray(itemsArrayContainer) {
-          console.log("Items array: " + itemsArrayContainer);
-
           menuItemsHtml += '<div id="menu-items-container" class="row">';
-          console.log("menuItemsHtml: " + menuItemsHtml);
 
           var categoryShortName = itemsArrayContainer.category.short_name;
           var categoryName = itemsArrayContainer.category.name;
           var specialInstructions = itemsArrayContainer.category.special_instructions;
 
           menuItemsHtml = insertProperty(menuItemsHtml, 'category_name', categoryName);
-          console.log("menuItemsHtml: " + menuItemsHtml);
           menuItemsHtml = insertProperty(menuItemsHtml, 'special_instructions', specialInstructions);
-          console.log("menuItemsHtml: " + menuItemsHtml);
 
           var itemsArray = itemsArrayContainer.menu_items;
 
           for (var i = 0; i < itemsArray.length; i++) {
             var shortName = itemsArray[i].short_name;
-            console.log("Name " + i + ": " + shortName);
             
             var itemName = itemsArray[i].name;
             var itemShortName = itemsArray[i].short_name;
