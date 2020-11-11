@@ -155,11 +155,13 @@ dc.loadMenuItems = function (shortName) {
             var itemName = itemsArray[i].name;
             var itemShortName = itemsArray[i].short_name;
             var description = itemsArray[i].description;
-            var price = itemsArray[i].price_small;
+            var price = itemsArray[i].price_large;
 
             var populatedItemHtml = insertProperty(menuItemHtml, 'item_short_name', itemShortName);
             populatedItemHtml = insertProperty(populatedItemHtml, 'item_name', itemName);
             populatedItemHtml = insertProperty(populatedItemHtml, 'category_short_name', categoryShortName);
+            populatedItemHtml = insertProperty(populatedItemHtml, 'description', description);
+            populatedItemHtml = insertProperty(populatedItemHtml, 'price', price);
             
             menuItemsHtml += populatedItemHtml;
           }
